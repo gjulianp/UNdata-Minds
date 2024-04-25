@@ -1,0 +1,5 @@
+pre, code, .output pre {
+  background-color: black; /* Cambia el color de fondo de los bloques de código y los resultados */
+  color: white; /* Cambia el color del texto dentro de los bloques de código y los resultados */
+}
+
