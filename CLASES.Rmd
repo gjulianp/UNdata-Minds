@@ -4,21 +4,26 @@ author: "Julian Andres Gomez Piedrahita/Mateo Martinez Vargas"
 date: "`r Sys.Date()`"
 output: 
   html_document:
-    theme: journal
-    toc: true
-    toc_float: true
+    toc: true #tabla de contenido
+    toc_depth: 3 #niveles de la tabla de contenido
+    toc_float: true #tabla de contenido presente en todo el documento
+    collapsed: true #presentar solo el nivel principal
+    smooth_scroll: true #tabla de contenido
+    theme: dark 
+    highlight: rstudio #presentar codigo
+    df_print: paged #presentar dataframes
+    code_folding: show
 ---
 
 
-# INSTALACION
+# INSTALACION Y DESCARGA
 
-BLA BLA BLA (LINK R Y RSTUDIO)
+Hablar sobre la instalación y descarga de R y Rstudio (referenciar la pagina oficial)
 
 # CARGA DE BASES DE DATOS
 
-Existen diferentes tipos de carga de datos para distintos archivo como por ejemplo, excel (xlsx), csv (separado por comas), txt (Archivos textuales)
-
-
+## TIPOS DE ARCHIVOS
+Hablar de las diferentes bases de datos, los distintos archivos como por ejemplos; excel (xlsx), separado por comas (csv), archivos textuales (txt), entre otros...
 ```{r}
 #read.csv("url", sep = , o tabulacion o : ) #csv
 #read.table() #txt
@@ -28,36 +33,21 @@ Existen diferentes tipos de carga de datos para distintos archivo como por ejemp
 #y organizarla (colocarle de los nombrres de columna header = True, nombres filas quitarse, row.names(false),  )
 ```
 
+## ORGANIZACIÓN DF
 
-Ejercicio carga base de datos con csv
-Vamos poner de ejemplo la base de datos de calidad del agua del rio ....
+Hablar sobre la organización de la base de datos, los nombres de columna, nombres de fila...
+
+# EJERCICIO PRACTICO
+
+
+1. Ejercicio carga base de datos con csv
+
+Hablar sobre la metadata de la base de datos, descrbir uqe significa cada columna y en que unidades esta...
+Vamos poner de ejemplo la base de datos de calidad del agua del rio u otra conveniente ....
 
 ```{r,include = TRUE,echo=TRUE}
 datos<- read.csv("datos_amoniaco.csv")
 datos
 ```
 
-
-
-Estes e el codigo para....
-```{r,include=TRUE,echo=TRUE}
-
-# Vector original
-x <- c(5, 7, 8, 9, 2, 3)
-
-# Convertir el vector en una matriz de 2x3
-matriz <- matrix(x, nrow = 2, byrow = TRUE)
-
-# Mostrar la matriz resultante
-matriz
-
-```
-
-Este es el otro codigo 
-## CODIGO 1.1
-```{r}
-
-#codigo
-
-```
 
