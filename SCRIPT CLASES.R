@@ -1,2 +1,2 @@
-datos <- read.csv("datos_amoniaco.csv",sep = ";")
+datos <- read.csv("precipitation.csv",sep = ";")
 datos
