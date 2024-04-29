@@ -1,5 +1,5 @@
 ---
-title: "CLASES"
+title: "Grupo UNData Minds"
 author: "Julian Andres Gomez Piedrahita/Mateo Martinez Vargas"
 date: "`r Sys.Date()`"
 output: 
@@ -15,39 +15,106 @@ output:
     code_folding: show
 ---
 
+# CLASE 1
 
-# INSTALACION Y DESCARGA
+## INSTALACION Y DESCARGA
 
-Hablar sobre la instalación y descarga de R y Rstudio (referenciar la pagina oficial)
+Para trabajar con R es recomendable utilizar Rstudio para su despligue, por su facil acceso y mejor visualización, asi que es aconsejable despues de instalar R como lenguaje, tambien descargar Rstudio como sistema de despligue del lenguaje.
 
-# CARGA DE BASES DE DATOS
+### WINDOWS
 
-## TIPOS DE ARCHIVOS
+En computadores basados con Sistema Operativo Windows:
+
+1.  Instalar R: Navegar a <http://cran.r-project.org/bin/windows/base/> y descargar el paquete que corresponda a nuestro sistema. Instalar Rstudio: Navegar a <http://www.rstudio>. com/products/rstudio/download/ y descargar el paquete que corresponda a nuestro sistema.
+
+2.  Instalar Rstudio: Navegar a <http://www.rstudio>. com/products/rstudio/download/ y descargar el paquete que corresponda a nuestro sistema.
+
+### Linux
+
+En Computadores basados en Sistema Operativo GNU/Linux:
+
+1.  sudo apt update
+
+2.  sudo apt install r-base
+
+3.  Descargar el paquete .deb desde su sitio web
+
+4.  Una vez descargado el paquete : sudo dpkg -i "nombre de archivo"
+
+### Mac Os X
+
+1.  Instalar R: Navegar a <http://cran.r-project.org/bin/macosx/> el paquete que corresponda a nuestro sistema.
+
+2.  Instalar Rstudio: Navegar a <http://www.rstudio>. com/products/rstudio/download/ y descargar y descargar el paquete que corresponda a nuestro sistema.
+
+# CLASE 2
+
+## CARGA DE BASES DE DATOS
+
+-   `file`: La ruta del archivo que importaremos, como cadena de texto. Si el archivo se encuentra en nuestro [directorio de trabajo](https://bookdown.org/jboscomendoza/r-principiantes4/tablas-datos-rectangulares.html##directorio-de-trabajo), es suficientedar el nombre del archivo, sin la ruta completa.
+
+-   `header`: Si nuestro archivo tiene encabezados, para ser interpretados como nombres de columna, definimos este argumento como `TRUE`.
+
+-   `sep`: El caracter que es usado como separador de columnas. Por defecto es “;”.
+
+-   `col.names`: Un vector opcional, de tipo caracter, con los nombres de las columnas en la tabla.
+
+-   `stringsAsFactors`: Esta función convierte automáticamente los datos de texto a factores. Si este no es el comportamiento que deseamos, definimos este argumento como `FALSE`.
+
+### TXT
+
 Hablar de las diferentes bases de datos, los distintos archivos como por ejemplos; excel (xlsx), separado por comas (csv), archivos textuales (txt), entre otros...
+
 ```{r}
-#read.csv("url", sep = , o tabulacion o : ) #csv
-#read.table() #txt
-#read.xlsx() # excel
 
-
-#y organizarla (colocarle de los nombrres de columna header = True, nombres filas quitarse, row.names(false),  )
 ```
 
-## ORGANIZACIÓN DF
+### .CSV
 
-Hablar sobre la organización de la base de datos, los nombres de columna, nombres de fila...
+```{r}
 
-# EJERCICIO PRACTICO
+```
 
+### .XLSX (EXCEL)
 
-1. Ejercicio carga base de datos con csv
+```{r}
 
-Hablar sobre la metadata de la base de datos, descrbir uqe significa cada columna y en que unidades esta...
-Vamos poner de ejemplo la base de datos de calidad del agua del rio u otra conveniente ....
+```
+
+### EJERCICIO PRACTICO
+
+Con una pequeña visualización de datos (Grafico)
+
+```{r}
+
+```
+
+# CLASE 3
+
+## ORGANIZACIÓN TABLA DE DATOS
+
+Cuando nuestros datos no lucen particularmente bien cuando los importamos a Rstudio, entonces necesitamos ajustar algunos parametros:
+
+-   Uno de los casos mas comunes esque no hay datos de encabezado.
+
+-   Las columnas estan juntas
+
+-   Valores nulos o valos faltantes
+
+Estas consideraciones las debemos tener en cuenta cuando la base de datos esta "sucia" o en desorden y habria que ordenarla al importar los datos en Rstudio.
+
+### Encabezado
+
+Para cargar los datos con el encabezado incluido se utiliza el codigo `header=True`:
+
+```{r}
+
+```
+
+### EJERCICIO PRACTICO
+
+Hablar sobre la metadata de la base de datos, descrbir uqe significa cada columna y en que unidades esta... Vamos poner de ejemplo la base de datos de calidad del agua del rio u otra conveniente ....
 
 ```{r,include = TRUE,echo=TRUE}
-datos<- read.csv("datos_amoniaco.csv")
-datos
+
 ```
-
-
